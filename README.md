@@ -9,8 +9,9 @@
     - useRef Hook
     - Firebase Setup
     - Deploying our app to producation
-    - Createed Sign Up
-    - Created sign In 
+    - Implement Sign Up
+    - Implement sign In 
+    - created userSlice with userSlice;
 
 
 # Features  
