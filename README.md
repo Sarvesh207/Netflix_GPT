@@ -12,6 +12,8 @@
     - Implement Sign Up
     - Implement sign In 
     - created userSlice with userSlice;
+    - Implemented sign out;
+    - update profile;
 
 
 # Features  
