@@ -14,6 +14,21 @@
     - created userSlice with userSlice;
     - Implemented sign out;
     - update profile;
+    - BugFix: Sign Up user displayname and profile picture;
+    - Bugfix - If the user is not logged in Redirect / browse to Login Page and Vice versa 
+    - Unscuscribe to the OnAuthstateChange CallBack
+    - add hardcoded file to constant file;
+    - Regidter TMDB API & Create App & get access token
+    - Get Data from TMDB now playing movies list
+    - Custom hook for Now Playing Movies
+    - crwated movieSlice
+    - update store with movies data
+    - Planning for MainContainer & Secondary Container
+    - Featch Data for Trailer Video
+    - Update Store With Trailer Video Data
+    - Embedded the video and make it autoplay and mute
+    - Tailwind Classes to make Main container awsome
+    - will build secondary container
 
 
 # Features  
