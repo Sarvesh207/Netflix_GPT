@@ -10,7 +10,7 @@ import { auth } from "../utils/firebase";
 import { useSearchParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import {USER_AVATAR} from "../utils/constant";
+import {BG_URL, USER_AVATAR} from "../utils/constant";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -97,7 +97,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/42df4e1f-bef6-499e-87ff-c990584de314/5e7c383c-1f88-4983-b4da-06e14c0984ba/IN-en-20230904-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
+          src={BG_URL}
           alt="background_logo"
         />
       </div>
