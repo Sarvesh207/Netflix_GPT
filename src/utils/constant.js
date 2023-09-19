@@ -36,3 +36,5 @@ export const SUPPORTED_LANGAUGES = [
     name: "French",
   },
 ];
+
+export const  OPENAI_KEY = "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"
