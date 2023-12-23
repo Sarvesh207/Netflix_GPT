@@ -1,6 +1,7 @@
 import React from "react";
 import Login from "./Login";
 import Browse from "./Browse";
+import LandingPage from "../pages/LandingPage";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -13,6 +14,10 @@ const Body = () => {
     {
       path: "/browse",
       element: <Browse />,
+    },
+    {
+      path: "/landing",
+      element: <LandingPage />,
     },
   ]);
 
