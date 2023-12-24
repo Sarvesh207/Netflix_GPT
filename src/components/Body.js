@@ -4,6 +4,7 @@ import Browse from "./Browse";
 import LandingPage from "../pages/LandingPage";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Signin from "../pages/Signin";
 
 const Body = () => {
   const appRouter = createBrowserRouter([
@@ -18,6 +19,10 @@ const Body = () => {
     {
       path: "/landing",
       element: <LandingPage />,
+    },
+    {
+      path: "/signin",
+      element: <Signin />,
     },
   ]);
 
