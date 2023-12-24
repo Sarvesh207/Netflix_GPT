@@ -34,6 +34,7 @@ const Faq = ({title, desc}) => {
 
             </div>
         </div>
+        
     </div>
   )
 }
