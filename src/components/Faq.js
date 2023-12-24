@@ -3,6 +3,9 @@ import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
 import { useState } from 'react'
 const Faq = ({title, desc}) => {
     const[open, setOpen] = useState(false)
+
+    
+    
   return (
     <div>
         <div className="faq_main container mx-auto lg:max-w-6xl md:max-w-6xl  px-5 text-white ">
