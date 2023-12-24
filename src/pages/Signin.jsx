@@ -1,10 +1,27 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import { BG_URL } from "../utils/constant";
+import { checkValidData } from "../utils/validate";
 const Signin = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
+  const[errorMessage, setErrorMessage] = useState(null)
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
   };
+
+  const handleButtonClick = () => {
+
+    //Validate Form Data
+   const message =  checkValidData(email.current.value, password.current.value, fullname.current.value);
+
+  //  Set Error if Emaail or Password is Not Valid
+   setErrorMessage(message);
+
+   // Sign In and Sign Up
+
+  }
+  const fullname = useRef(null)
+  const email = useRef(null)
+  const password = useRef(null)
   return (
     <div
       className="lg:h-[100vh] md:h-[100vh]"
@@ -13,13 +30,14 @@ const Signin = () => {
       }}
     >
       <div className="main flex justify-center items-center  h-screen">
-        <form className="sub_main bg-black bg-opacity-75 p-20 text-white rounded ">
+        <form onSubmit={(e) => (e.preventDefault())} className="sub_main bg-black bg-opacity-75 p-20 text-white rounded ">
           <h2 className="text-3xl font-bold mb-7">
             {isSignInForm ? "Sign In" : "Sign Up"}
           </h2>
 
           {!isSignInForm && <div className="mb-7">
             <input
+            ref={fullname}
               type="text"
               placeholder="Full Name"
               className="w-full px-3 py-3 rounded-md bg-[#333333] outline-none"
@@ -27,6 +45,7 @@ const Signin = () => {
           </div>}
           <div className="mb-7">
             <input
+              ref={email}
               type="text"
               placeholder="Email"
               className="w-full px-3 py-3 rounded-md bg-[#333333] outline-none"
@@ -35,16 +54,22 @@ const Signin = () => {
          
           <div className="mb-7">
             <input
-              type="text"
+              ref={password}
+              type="password"
               placeholder="Password"
               className="w-full px-3 py-3 rounded-md bg-[#333333] outline-none"
             />
+          </div>
+
+          <div>
+          <p>{errorMessage}</p>
           </div>
 
           <div className="mb-2">
             <button
               type="button"
               className="bg-[#e50815] w-full py-3 rounded-md"
+              onClick={handleButtonClick}
             >
               {isSignInForm ? "Sign In" : "Sign Up"}
             </button>
@@ -63,6 +88,7 @@ const Signin = () => {
               <p className="font-light text-sm text-gray-400">Need help?</p>
             </div>
           </div>
+         
           <div className="mb-5">
             <p>
               <span className="font-light text-gray-400 ">{isSignInForm ? "New to Netflix" : "Already registered?"}</span>{" "}
