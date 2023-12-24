@@ -4,6 +4,7 @@ import { HeroSection, Watch, Download, CreateProfile } from '../components/index
 import Enjoy from '../components/Enjoy'
 import Faq from '../components/Faq'
 import  {faqData}  from '../Data/faqData'
+import Footer from '../components/Footer'
 
 const LandingPage = () => {
 
@@ -51,6 +52,7 @@ const LandingPage = () => {
         </div>
 
         <div className='hr_Line' />
+        <Footer/>
       </div>
    
   )
