@@ -5,6 +5,7 @@ export const USER_AVATAR =
 export const VIDEO1 = "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
 export const VIDEO2 = "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
 export const FEVICON =  "https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2023.ico"
+export const KIDSPROFILE = "https://occ-0-3192-2164.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d"
 export const API_OPTIONS = {
   method: "GET",
   headers: {

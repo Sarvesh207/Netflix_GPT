@@ -1,6 +1,6 @@
 import React from 'react'
 import { BG_URL } from '../utils/constant'
-import { HeroSection, Navbar } from '../components'
+import { HeroSection, Watch, Download, CreateProfile } from '../components/index'
 import Enjoy from '../components/Enjoy'
 
 const LandingPage = () => {
@@ -9,6 +9,9 @@ const LandingPage = () => {
    
     <HeroSection/>
     <Enjoy/>
+    <Download/>
+    <Watch/>
+    <CreateProfile/>
    </div>
   )
 }

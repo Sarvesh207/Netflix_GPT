@@ -51,7 +51,7 @@ const HeroSection = () => {
       </div>
       </div>
 
-      <div className="hr_line"></div>
+      <div className="hr_Line"></div>
     </>
   );
 };
