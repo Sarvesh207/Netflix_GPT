@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className=''>
 
-        <div className='main flex justify-between items-center py-5 px-5'>
+        <div className='main flex justify-between items-center py-5 px-5 lg:justify-around md:justify-around lg:mb-28 md:mb-10'>
             <div className='left'>
                 <div className='netflix'>
                     <img src={LOGO} alt="NetflixLogo" className='lg:w-44 md:w-28  ' />
