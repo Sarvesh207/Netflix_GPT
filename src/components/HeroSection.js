@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from './Navbar'
 import { BG_URL } from "../utils/constant";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -29,7 +30,8 @@ const HeroSection = () => {
               className=" bg-[#1d1e1e] text-white text-lg py-3 px-3 w-80 lg:w-96 rounded-md opacity-80 border border-gray-300 hover:ring-1 hover:ring-gray-50   outline-none mb-5 md:mb-0 lg:mb-0"
               placeholder="Email address"
             />
-            <button className="bg-[#e50815] flex items-center gap-2 py-3 px-5 rounded-lg">
+            <Link to={'/signin'}>
+            <button className="bg-[#e50815] hover:bg-[#d80c1a] flex items-center gap-2 py-3 px-5 rounded-lg">
               <p className="text-white font-bold text-xl">Get Started</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -46,6 +48,7 @@ const HeroSection = () => {
                 />
               </svg>
             </button>
+            </Link>
           </div>
         </div>
       </div>
