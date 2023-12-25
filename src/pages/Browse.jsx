@@ -1,11 +1,11 @@
 
 import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
-import MainContainer from "./MainContainer";
-import SecondaryContainer from "./SecondaryContainer";
+import MainContainer from "../components/MainContainer";
+import SecondaryContainer from "../components/SecondaryContainer";
 import usePopularMovies from "../hooks/usePopularMovies";
-import GptSearch from "./GptSearch";
+import GptSearch from "../components/GptSearch";
 import { useSelector } from "react-redux";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 
 const Browse = () => {
   const showGptSearch = useSelector((store) => store.gpt.showGptSearch);

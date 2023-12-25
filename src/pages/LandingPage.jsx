@@ -9,11 +9,11 @@ import { Link } from 'react-router-dom'
 
 const LandingPage = () => {
 
-  console.log(faqData)
+  
   return (
    <div >
    
-    <HeroSection/>
+    <HeroSection />
     <Enjoy/>
     <Download/>
     <Watch/>

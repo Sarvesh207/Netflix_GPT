@@ -61,8 +61,8 @@ const Navbar = () => {
   
   return (
     <div className=''>
-    <div className="flex justify-between lg:justify-around md:justify-around items-center
-     lg:py-5 md:py-5 py-5 px-5 lg:px-0 md:px-0 lg:mb-28 md:mb-28 mb-10">
+    <div className="flex  justify-between lg:justify-around md:justify-around items-center
+     lg:py-5 md:py-5 py-5 px-5 lg:px-0 md:px-0 ">
         <div className="left">
             <div className="netflix_logo">
                 <img

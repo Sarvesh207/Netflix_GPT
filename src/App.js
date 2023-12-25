@@ -3,7 +3,7 @@ import Body from "./components/Body";
 import appStore from "./utils/appStore";
 import React from "react";
 import Login from "./components/Login";
-import Browse from "./components/Browse";
+import Browse from "./pages/Browse";
 import LandingPage from "./pages/LandingPage";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
