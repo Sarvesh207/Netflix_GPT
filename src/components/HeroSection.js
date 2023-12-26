@@ -6,8 +6,9 @@ import { Link } from "react-router-dom";
 const HeroSection = () => {
   return (
     <>
-    <div className='lg:h-[45.5em] mt  md:h-[40em]' style={{background: `linear-gradient(80deg,black,transparent), url(${BG_URL})`}}>
-      <Navbar/>
+
+    <div className='lg:h-[45.5em]  md:h-[40em]' style={{background: `linear-gradient(80deg,black,transparent), url(${BG_URL})`}}>
+    <Navbar/>
       <div className=" container mx-auto flex justify-center items-center min-96 lg:mb-28 md:mb-28 mt-32 ">
         <div className=" ">
           <h1 className=" text-white text-center lg:text-5xl md:text-5xl text-3xl px-5  font-bold lg:px-20 mb-5">

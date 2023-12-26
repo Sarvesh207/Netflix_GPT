@@ -6,13 +6,13 @@ import Faq from '../components/Faq'
 import  {faqData}  from '../Data/faqData'
 import Footer from '../components/Footer'
 import { Link } from 'react-router-dom'
-
+import Navbar from '../components/Navbar'
 const LandingPage = () => {
 
   
   return (
    <div >
-   
+    
     <HeroSection />
     <Enjoy/>
     <Download/>

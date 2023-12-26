@@ -6,17 +6,12 @@ import { BG_URL } from "../utils/constant";
 const GptSearch = () => {
   return (
     <>
-      <div className="absolute -z-10">
-        <img
-          className="h-screen object-cover"
-          src={BG_URL}
-          alt="background_logo"
-        />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-      </div>
+      <div className='lg:h-[45.5em] mt  md:h-[40em]' style={{background: `linear-gradient(80deg,black,transparent), url(${BG_URL})`}}>
 
       <div className="pt-[30%] md:p-0">
         <GptSearchBar />
         <GptMovieSuggestions />
+      </div>
       </div>
     </>
   );

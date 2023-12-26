@@ -27,7 +27,7 @@ export const SUPPORTED_LANGAUGES = [
   },
   {
     identifier: "hindi",
-    name: "Hindi",
+    name: "हिन्दी",
   },
 
   {
@@ -40,4 +40,4 @@ export const SUPPORTED_LANGAUGES = [
   },
 ];
 
-export const  OPENAI_KEY = "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"
+export const  OPENAI_KEY = "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"

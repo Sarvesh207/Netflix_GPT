@@ -14,7 +14,10 @@ const Browse = () => {
 
   return (
     <div>
-      <Navbar />
+      <div className="absolute z-10 w-full">
+      <Navbar/>
+      </div>
+      
       {showGptSearch ? (
         <GptSearch />
       ) : (
