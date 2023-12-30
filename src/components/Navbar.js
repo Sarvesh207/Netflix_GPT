@@ -51,18 +51,17 @@ const Navbar = () => {
     return () => unsubscribe();
   }, []);
 
-  const handleGptSearchClick = () => {
-    dispatch(toggleGptSearchView());
-  };
+
 
   const handleLangugeChange = (e) => {
     dispatch(changeLangauge(e.target.value));
   };
 
   return (
-    <div className="">
+    <div className="relative">
+    <div className="z-50 absolute mx-auto w-full  ">
       <div
-        className="flex  justify-between lg:justify-around md:justify-around items-center
+        className="bg-transparent  flex  justify-between lg:justify-around md:justify-around items-center
      lg:py-5 md:py-5 py-5 px-5 lg:px-0 md:px-0 "
       >
         <div className="left">
@@ -86,8 +85,9 @@ const Navbar = () => {
 
             {user && (
               <div className="flex gap-3">
-                <button className="text-white bg-purple-800 hover:bg-purple-900 px-5 py-1.5 rounded-lg font-bold" onClick={handleGptSearchClick}>{showGptSearch ? "Home" : "GPT Search"}</button>
-                
+                <Link to="/gptsearch">
+                <button className="text-white bg-purple-800 hover:bg-purple-900 px-5 py-1.5 rounded-lg font-bold" >{showGptSearch ? "Home" : "GPT Search"}</button>
+                </Link>
               </div>
             )}
             <Link to={"/signin"}>
@@ -101,6 +101,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
