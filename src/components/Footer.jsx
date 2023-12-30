@@ -54,7 +54,10 @@ const Footer = () => {
                     </div>
                     <p className='text-gray-300 mx-5'>Netflix India</p>
 
-                </div>
+            </div>
+
+            
+       
       </div>
     </div>
   );

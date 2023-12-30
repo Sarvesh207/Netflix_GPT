@@ -7,6 +7,7 @@ import  {faqData}  from '../Data/faqData'
 import Footer from '../components/Footer'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import SubFooter from '../components/SubFooter'
 const LandingPage = () => {
 
   
@@ -56,6 +57,8 @@ const LandingPage = () => {
 
         <div className='hr_Line' />
         <Footer/>
+        <div className='hr_Line' />
+        <SubFooter/>
       </div>
    
   )
