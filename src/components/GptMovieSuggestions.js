@@ -5,6 +5,9 @@ import MoviesList from "../components/MovieList";
 const GptMovieSuggestions = () => {
   const { movieResults, movieNames } = useSelector((state) => state.gpt);
 
+  console.log(movieResults);
+  console.log(movieNames);
+
   if (!movieResults) return null;
   return (
     <div className="p-4 m-4 bg-black text-white">

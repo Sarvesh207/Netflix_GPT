@@ -5,11 +5,15 @@ import openai from "../utils/openai";
 import { API_OPTIONS } from "../utils/constant";
 import { useDispatch } from "react-redux";
 import { addGptMoviesResult } from "../utils/gptSlice";
+
+
 const GptSearchBar = () => {
   const langKey = useSelector((store) => store.config.lang);
   const searchText = useRef(null);
   const dispatch = useDispatch();
   // console.log(searchText.current.value);
+
+
   const searchMovieTMDB = async (movie) => {
     const data = await fetch(
       "https://api.themoviedb.org/3/search/movie?query=" +
@@ -43,7 +47,7 @@ const GptSearchBar = () => {
 
     const tmdbresults = await Promise.all(promiseArray)
 
-    console.log(tmdbresults);
+  console.log(tmdbresults);
     dispatch(addGptMoviesResult({moviesNames:gptMovies, moviesResults:tmdbresults}));
 
   
