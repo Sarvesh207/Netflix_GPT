@@ -1,19 +1,16 @@
 import React, { useRef } from "react";
 import lang from "../utils/langaugeConstant";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import openai from "../utils/openai";
 import { API_OPTIONS } from "../utils/constant";
-import { useDispatch } from "react-redux";
-import { addGptMoviesResult } from "../utils/gptSlice";
+import { addGptMovieResult } from "../utils/gptSlice";
 
 
 const GptSearchBar = () => {
-  const langKey = useSelector((store) => store.config.lang);
   const searchText = useRef(null);
   const dispatch = useDispatch();
-  // console.log(searchText.current.value);
-
-
+  const langKey = useSelector((store) => store.config.lang);
+  
   const searchMovieTMDB = async (movie) => {
     const data = await fetch(
       "https://api.themoviedb.org/3/search/movie?query=" +
@@ -28,36 +25,73 @@ const GptSearchBar = () => {
 
 
 
-  const handleGptSearchClick = async() => {
+  const handleGptSearchClick = async () => {
     console.log(searchText.current.value);
+    // Make an API call to GPT API and get Movie Results
 
-    const  gptQuery = "Act as a Movie Recommendation system and suggest some movies for the query : " + searchText.current.value + "only give name of 5 movies, seperated like the example result given ahed. Example Result : Gadhar, Sholey, Don, Golmal, Koi Mil Gaya";
+    const gptQuery =
+      "Act as a Movie Recommendation system and suggest some movies for the query : " +
+      searchText.current.value +
+      ". only give me names of 5 movies, comma seperated like the example result given ahead. Example Result: Gadar, Sholay, Don, Golmaal, Koi Mil Gaya";
 
-    //Make an API call to GPT and get Movie results
     const gptResults = await openai.chat.completions.create({
-      messages: [{ role: 'user', content: gptQuery}],
-      model: 'gpt-3.5-turbo',
+      messages: [{ role: "user", content: gptQuery }],
+      model: "gpt-3.5-turbo",
     });
 
-    console.log(gptResults.choices?.[0]?.message?.content.split(","));
+    if (!gptResults.choices) {
+      // TODO: Write Error Handling
+    }
+
+    console.log(gptResults.choices?.[0]?.message?.content);
+
+    // Andaz Apna Apna, Hera Pheri, Chupke Chupke, Jaane Bhi Do Yaaro, Padosan
     const gptMovies = gptResults.choices?.[0]?.message?.content.split(",");
 
-    // for each movie name, fetch the movie details from TMDB API
-    const promiseArray = gptMovies.map(movie => searchMovieTMDB(movie));
+    // ["Andaz Apna Apna", "Hera Pheri", "Chupke Chupke", "Jaane Bhi Do Yaaro", "Padosan"]
 
-    const tmdbresults = await Promise.all(promiseArray)
+    // For each movie I will search TMDB API
 
-  console.log(tmdbresults);
-    dispatch(addGptMoviesResult({moviesNames:gptMovies, moviesResults:tmdbresults}));
+    const promiseArray = gptMovies.map((movie) => searchMovieTMDB(movie));
+    // [Promise, Promise, Promise, Promise, Promise]
 
-  
+    const tmdbResults = await Promise.all(promiseArray);
 
-    
-    
+    console.log(tmdbResults);
 
-  
-
+    dispatch(
+      addGptMovieResult({ movieNames: gptMovies, movieResults: tmdbResults })
+    );
   };
+
+
+
+  // const handleGptSearchClick = async() => {
+
+  //   const  gptQuery = "Act as a Movie Recommendation system and suggest some movies for the query : " + searchText.current.value + "only give name of 5 movies, seperated like the example result given ahed. Example Result : Gadhar, Sholey, Don, Golmal, Koi Mil Gaya";
+
+  //   //Make an API call to GPT and get Movie results
+  //   const gptResults = await openai.chat.completions.create({
+  //     messages: [{ role: 'user', content: gptQuery}],
+  //     model: 'gpt-3.5-turbo',
+  //   });
+
+    
+  //   const gptMovies = gptResults.choices?.[0]?.message?.content.split(",");
+  //   console.log(gptMovies);
+
+  //   // for each movie name, fetch the movie details from TMDB API
+  //   const promiseArray = gptMovies.map(movie => searchMovieTMDB(movie));
+
+  //   const tmdbresults = await Promise.all(promiseArray)
+
+  // console.log(tmdbresults);
+  //   dispatch(
+  //     addGptMoviesResult({moviesNames:gptMovies, moviesResults:tmdbresults})
+      
+  //     );
+
+  // };
 
   return (
     <div className="pt-[35%] md:pt-[10%] flex justify-center">

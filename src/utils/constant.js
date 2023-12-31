@@ -1,11 +1,19 @@
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
 export const LOGO =
   "https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png";
 export const USER_AVATAR =
   "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png?20201013161117";
-export const VIDEO1 = "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
-export const VIDEO2 = "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
-export const FEVICON =  "https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2023.ico"
-export const KIDSPROFILE = "https://occ-0-3192-2164.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d"
+export const VIDEO1 =
+  "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v";
+export const VIDEO2 =
+  "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v";
+export const FEVICON =
+  "https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2023.ico";
+export const KIDSPROFILE =
+  "https://occ-0-3192-2164.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d";
 export const API_OPTIONS = {
   method: "GET",
   headers: {
@@ -40,4 +48,11 @@ export const SUPPORTED_LANGAUGES = [
   },
 ];
 
-export const  OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
+export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
+
+export const socialIcons = [
+  { name: "github", icon: FaGithub  },
+  { name: "linkedin", icon: FaLinkedin },
+  { name: "twitter", icon: FaSquareXTwitter },
+  { name: "instagram", icon: FaInstagram },
+];

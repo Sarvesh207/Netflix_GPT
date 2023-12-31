@@ -5,7 +5,7 @@ import usePopularMovies from "../hooks/usePopularMovies";
 
 
 const Browse = () => {
-  // const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
+  
   useNowPlayingMovies();
   usePopularMovies();
 
