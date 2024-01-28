@@ -12,6 +12,7 @@ const Browse = () => {
   return (
     <div className="absolute z-10 w-full">
         <MainContainer />
+        
         <SecondaryContainer />
       
     </div>

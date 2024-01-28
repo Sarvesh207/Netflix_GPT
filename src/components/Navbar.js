@@ -69,7 +69,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="right">
-          <div className="flex items-center ">
+          <div className="flex items-center gap-3 ">
              { showGptSearch && <div
                 className=" bg-[#111112] text-white mx-4 
                   lg:px-5 md:px-5 px-3 py-1 rounded-md border-[1.5px] border-gray-600 hover:ring-2 hover:ring-gray-200 opacity-80 "
